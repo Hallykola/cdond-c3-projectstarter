@@ -215,12 +215,10 @@ jobs:
           fingerprints:
             - "da:5d:7e:79:44:44:a3:d7:54:61:49:7c:3a:ae:42:7b"
       - attach_workspace:
-          at: ~/project/.circleci/ansible/inventory.txt
-      - run:
-          name: Install dependencies
-          command: |
-            - install_awscli
-            - install_ansible
+          at: ~/
+      
+      - install_awscli
+      - install_ansible
             
       - run:
           name: Configure server
