@@ -258,7 +258,8 @@ jobs:
       - checkout
 
       - add_ssh_keys:
-          fingerprints: "da:5d:7e:79:44:44:a3:d7:54:61:49:7c:3a:ae:42:7b"
+          fingerprints: 
+            - "da:5d:7e:79:44:44:a3:d7:54:61:49:7c:3a:ae:42:7b"
       - attach_workspace:
           at: ~/
 
@@ -299,7 +300,8 @@ jobs:
       # attach workspace
       - checkout
       - add_ssh_keys:
-          fingerprints: "da:5d:7e:79:44:44:a3:d7:54:61:49:7c:3a:ae:42:7b"
+          fingerprints: 
+            - "da:5d:7e:79:44:44:a3:d7:54:61:49:7c:3a:ae:42:7b"
       - attach_workspace:
           at: ~/
       - run:
@@ -387,7 +389,7 @@ jobs:
       - destroy-environment
       - revert-migrations
 
-cleanup:
+  cleanup:
     docker:
       - image: cimg/base:stable
     steps:
