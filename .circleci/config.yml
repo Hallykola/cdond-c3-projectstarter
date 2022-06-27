@@ -282,7 +282,7 @@ jobs:
           name: Deploy frontend objects
           command: |
             cd frontend
-            npm install -g npm@latest
+            sudo npm install -g npm@latest
             rm -rf node_modules
             npm install
             npm run build
@@ -314,7 +314,7 @@ jobs:
           command: |
             cd backend
             npm i
-            npm install -g npm@latest
+            sudo npm install -g npm@latest
             rm -rf node_modules
             npm install
             npm run build
