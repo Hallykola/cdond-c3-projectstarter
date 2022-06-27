@@ -299,10 +299,13 @@ jobs:
             - "da:5d:7e:79:44:44:a3:d7:54:61:49:7c:3a:ae:42:7b"
       - attach_workspace:
           at: ~/
-      - run:
-          name: Install dependencies
-          command: |
-            apk add --update ansible
+      # - run:
+      #     name: Install dependencies
+      #     command: |
+      #       apk add --update ansible
+      - install_nodejs
+      - install_awscli
+      - install_ansible
       - run:
           name: Deploy backend
           command: |
