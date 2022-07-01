@@ -255,7 +255,7 @@ jobs:
             then
              curl --insecure https://kvdb.io/${KVDB_BUCKET}/migration_${CIRCLE_WORKFLOW_ID:0:7}  -d '1'
             fi
-      # - destroy-environment 
+      - destroy-environment 
       - revert-migrations     
 
   deploy-frontend:
@@ -373,8 +373,8 @@ jobs:
             else
               exit 1
             fi
-      # - destroy-environment
-      # - revert-migrations
+      - destroy-environment
+      - revert-migrations
       
 
   cloudfront-update:
