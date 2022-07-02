@@ -16,6 +16,21 @@
 - name: "Executing Node app with PM2"
   shell: |
     cd ~/backend-app/dist
+
+    cd ../
+    npm install
+    export TYPEORM_CONNECTION=${TYPEORM_CONNECTION}
+    export TYPEORM_ENTITIES=${TYPEORM_ENTITIES}
+    export TYPEORM_HOST=${TYPEORM_HOST}
+    export TYPEORM_PORT=${TYPEORM_PORT}
+    export TYPEORM_USERNAME=${TYPEORM_USERNAME}
+    export TYPEORM_PASSWORD=${TYPEORM_PASSWORD}
+    export TYPEORM_DATABASE=${TYPEORM_DATABASE}
+    export TYPEORM_MIGRATIONS=${TYPEORM_MIGRATIONS}
+    export TYPEORM_MIGRATIONS_DIR=${TYPEORM_MIGRATIONS_DIR}
+    npm build
+    cd dist
+
     pm2 stop default
     pm2 start main.js
   register: execute_node
