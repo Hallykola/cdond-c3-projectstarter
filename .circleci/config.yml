@@ -385,8 +385,8 @@ jobs:
             else
               exit 1
             fi
-      - destroy-environment
-      - revert-migrations
+      # - destroy-environment
+      # - revert-migrations
       
 
   cloudfront-update:
@@ -415,7 +415,7 @@ jobs:
   cleanup:
     docker:
       - image: cimg/base:stable
-      
+
     steps:
       - checkout
       - install_awscli
