@@ -38,11 +38,13 @@
     export TYPEORM_DATABASE=postgres
     export TYPEORM_MIGRATIONS=./src/migrations/*.ts
     export TYPEORM_MIGRATIONS_DIR=./src/migrations
-    npm build
-    cd dist
+    npm run build
+    npm start
+    
+    # cd dist
 
-    pm2 stop default
-    pm2 start main.js
+    # pm2 stop default
+    # pm2 start main.js
   register: execute_node
 
 - name: print message
