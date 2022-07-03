@@ -432,7 +432,8 @@ jobs:
       - run:
           name: Remove old stacks and files
           command: |
-
+            export OldWorkflowID=$(curl --insecure https://kvdb.io/${KVDB_BUCKET}/old_workflow_id)
+            echo Old Workflow ID: $OldWorkflowID 
 
             if [[ "${STACKS[@]}" =~ "${OldWorkflowID}" ]]
             then
