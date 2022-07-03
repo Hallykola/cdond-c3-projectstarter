@@ -39,15 +39,11 @@
     export TYPEORM_MIGRATIONS=./src/migrations/*.ts
     export TYPEORM_MIGRATIONS_DIR=./src/migrations
     npm run build
-    # npm start
-
-    echo $TYPEORM_HOST
-    # echo 'yaay'
     
-    cd dist
-
-    pm2 stop default
-    pm2 start main.js
+    sudo npm install forever -g
+    sudo npm install ts-node -g
+    forever start -c "ts-node -r tsconfig-paths/register -r dotenv/config src/main.ts" ./
+    
   register: execute_node
 
 - name: print message
