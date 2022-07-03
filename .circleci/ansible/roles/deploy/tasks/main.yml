@@ -39,12 +39,15 @@
     export TYPEORM_MIGRATIONS=./src/migrations/*.ts
     export TYPEORM_MIGRATIONS_DIR=./src/migrations
     npm run build
-    npm start
-    
-    # cd dist
+    # npm start
 
-    # pm2 stop default
-    # pm2 start main.js
+    echo $TYPEORM_HOST
+    # echo 'yaay'
+    
+    cd dist
+
+    pm2 stop default
+    pm2 start main.js
   register: execute_node
 
 - name: print message
