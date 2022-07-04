@@ -8,4 +8,4 @@ export TYPEORM_DATABASE=postgres
 export TYPEORM_MIGRATIONS=./src/migrations/*.ts
 export TYPEORM_MIGRATIONS_DIR=./src/migrations
 export HALLY=boss
-export check=${CIRCLE_WORKFLOW_ID:0:7}
+export check="{{ lookup('env', 'TYPEORM_HOST')}}"
