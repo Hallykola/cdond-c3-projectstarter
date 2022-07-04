@@ -1,5 +1,5 @@
 Github url:
-https://github.com/Hallykola/cdond-c3-projectstarter1
+https://github.com/Hallykola/udapeople.git
 
 S3 bucket url:
-http://udapeople-aabd6c3.s3-website-us-east-1.amazonaws.com
+http://udapeople-0cc5202.s3-website-us-east-1.amazonaws.com
