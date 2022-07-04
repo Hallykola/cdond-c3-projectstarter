@@ -1,0 +1,5 @@
+Github url:
+https://github.com/Hallykola/cdond-c3-projectstarter1
+
+S3 bucket url:
+http://udapeople-aabd6c3.s3-website-us-east-1.amazonaws.com
