@@ -18,7 +18,7 @@
     cd ~/backend-app/dist
 
     cd ../
-    npm install
+    sudo npm install
     export TYPEORM_CONNECTION="{{ lookup('env', 'TYPEORM_CONNECTION')}}"  
     export TYPEORM_ENTITIES="{{ lookup('env', 'TYPEORM_ENTITIES')}}"
     export TYPEORM_HOST="{{ lookup('env', 'TYPEORM_HOST')}}"
@@ -30,7 +30,7 @@
     export TYPEORM_MIGRATIONS_DIR="{{ lookup('env', 'TYPEORM_MIGRATIONS_DIR')}}"
 
     npm run build
-    
+
     echo $TYPEORM_HOST > checking.txt
 
     sudo npm install forever -g
