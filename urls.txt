@@ -2,4 +2,4 @@ Github url:
 https://github.com/Hallykola/udapeople.git
 
 S3 bucket url:
-http://udapeople-ead34b2.s3-website-us-east-1.amazonaws.com
+http://udapeople-b9c9e28.s3-website-us-east-1.amazonaws.com
